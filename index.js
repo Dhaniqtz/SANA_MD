@@ -1,5 +1,5 @@
 /*created by dhanitha chiran 🕵
-contact me 94711936025 ♻️
+contact me 94719002563 ♻️
 © Copy coder alert ⚠
 */
 
@@ -35,7 +35,7 @@ const Crypto = require('crypto')
 const path = require('path')
 const prefix = config.PREFIX
 
-const ownerNumber = ['94711936025']
+const ownerNumber = ['94719002563']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
@@ -128,7 +128,7 @@ const type = getContentType(mek.message)
 const content = JSON.stringify(mek.message)
 const from = mek.key.remoteJid
 const quoted = type == 'extendedTextMessage' && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.quotedMessage || [] : []
-const body = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : (type == 'imageMessage') && mek.message.imageMessage.caption || ''
+const body = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : (type == 'imageMessage') && mek.message.imageMessage.[...]
 const isCmd = body.startsWith(prefix)
 const command = isCmd ? body.slice(prefix.length).trim().split(' ').shift().toLowerCase() : ''
 const args = body.trim().split(/ +/).slice(1)
@@ -184,32 +184,32 @@ conn.ev.on('messages.upsert', async (mek) => {
             ? mek.message.ephemeralMessage.message 
             : mek.message;
 
-        // Auto-read functionality
-        if (config.READ_MESSAGE === 'true') {
-            await conn.readMessages([mek.key]);  // Mark message as read
-            console.log(`Marked message from ${mek.key.remoteJid} as read.`);
-        }
+         // Auto-read functionality
+         if (config.READ_MESSAGE === 'true') {
+             await conn.readMessages([mek.key]);  // Mark message as read
+             console.log(`Marked message from ${mek.key.remoteJid} as read.`);
+         }
 
-        // Continue with your existing message processing logic here...
-        const m = sms(conn, mek);
-        const type = getContentType(mek.message);
-        const content = JSON.stringify(mek.message);
-        const from = mek.key.remoteJid;
-        const isGroup = from.endsWith('@g.us');
-        const sender = mek.key.fromMe 
-            ? conn.user.id.split(':')[0] + '@s.whatsapp.net' 
-            : mek.key.participant || mek.key.remoteJid;
+         // Continue with your existing message processing logic here...
+         const m = sms(conn, mek);
+         const type = getContentType(mek.message);
+         const content = JSON.stringify(mek.message);
+         const from = mek.key.remoteJid;
+         const isGroup = from.endsWith('@g.us');
+         const sender = mek.key.fromMe 
+             ? conn.user.id.split(':')[0] + '@s.whatsapp.net' 
+             : mek.key.participant || mek.key.remoteJid;
 
-        // More code...
-    } catch (err) {
-        console.error('Error in message handler:', err);
-    }
-});
+         // More code...
+     } catch (err) {
+         console.error('Error in message handler:', err);
+     }
+ });
 
 
         
 //================ownerreact==============
-if(senderNumber.includes("94711936025")){
+if(senderNumber.includes("94719002563")){
 if(isReact) return
 m.react("👑")
 }
@@ -217,12 +217,12 @@ if(senderNumber.includes("918930358452")){
 if(isReact) return
 m.react("👑")
 }
-if(senderNumber.includes("94711936025")){
+if(senderNumber.includes("94719002563")){
 if(isReact) return
 m.react("🦋")
    }
 
-if(senderNumber.includes("94711936025")){
+if(senderNumber.includes("94719002563")){
 if(isReact) return
 m.react("🎀")
    }
@@ -231,86 +231,86 @@ m.react("🎀")
 // Auto React 
 if (!isReact && senderNumber !== botNumber) {
     if (config.AUTO_REACT === 'true') {
-        const reactions = ['😊', '👍', '😂', '💯', '🔥', '🙏', '🎉', '👏', '😎', '🤖', '👫', '👭', '👬', '👮', "🕴️", '💼', '📊', '📈', '📉', '📊', '📝', '😘'];
+        const reactions = ['😊', '👍', '😂', '💯', '🔥', '🙏', '🎉', '👏', '😎', '🤖', '👫', '👭', '👬', '👮', "🕴️", '💼', '📊', '📈', '📉', '📊', '📝[...]
 
-        const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
-        m.react(randomReaction);
-    }
-}
+         const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+         m.react(randomReaction);
+     }
+ }
 
-// Owner React
-if (!isReact && senderNumber === botNumber) {
-    if (config.OWNER_REACT === 'true') {
-        const reactions = ['😊', '👍', '😂', '💯', '🔥', '🙏', '🎉', '👏', '😎', '🤖', '👫', '👭', '👬', '👮', "🕴️", '💼', '📊', '📈', '📉', '📊', '📝', '😘'];
-        const randomOwnerReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
-        m.react(randomOwnerReaction);
-    }
-}
+ // Owner React
+ if (!isReact && senderNumber === botNumber) {
+     if (config.OWNER_REACT === 'true') {
+         const reactions = ['😊', '👍', '😂', '💯', '🔥', '🙏', '🎉', '👏', '😎', '🤖', '👫', '👭', '👬', '👮', "🕴️", '💼', '📊', '📈', '📉', '📊', '📝[...]
+         const randomOwnerReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+         m.react(randomOwnerReaction);
+     }
+ }
+         
+ //============================HRTPACK============================       
+         //=======HRT React 
+ if (!isReact && senderNumber !== botNumber) {
+     if (config.HEART_REACT === 'true') {
+             const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜'[...]
+            const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+         m.react(randomReaction);
+     }
+ }
+ //=======HRT React 
+ if (!isReact && senderNumber === botNumber) {
+     if (config.HEART_REACT === 'true') {
+             const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜'[...]
+            const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+         m.react(randomReaction);
+     }
+ }        
+ //=================================WORKTYPE=========================================== 
+ if(!isOwner && config.MODE === "private") return
+ if(!isOwner && isGroup && config.MODE === "inbox") return
+ if(!isOwner && isGroup && config.MODE === "groups") return
+ //======================================================
+
+
+
+
         
-//============================HRTPACK============================       
-        //=======HRT React 
-if (!isReact && senderNumber !== botNumber) {
-    if (config.HEART_REACT === 'true') {
-            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🖤'];
-           const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
-        m.react(randomReaction);
-    }
-}
-//=======HRT React 
-if (!isReact && senderNumber === botNumber) {
-    if (config.HEART_REACT === 'true') {
-            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🖤'];
-           const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
-        m.react(randomReaction);
-    }
-}        
-//=================================WORKTYPE=========================================== 
-if(!isOwner && config.MODE === "private") return
-if(!isOwner && isGroup && config.MODE === "inbox") return
-if(!isOwner && isGroup && config.MODE === "groups") return
-//======================================================
+ const events = require('./command')
+ const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
+ if (isCmd) {
+ const cmd = events.commands.find((cmd) => cmd.pattern === (cmdName)) || events.commands.find((cmd) => cmd.alias && cmd.alias.includes(cmdName))
+ if (cmd) {
+ if (cmd.react) conn.sendMessage(from, { react: { text: cmd.react, key: mek.key }})
 
+ try {
+ cmd.function(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, grou[...]
+ } catch (e) {
+ console.error("[PLUGIN ERROR] " + e);
+ }
+ }
+ }
+ events.commands.map(async(command) => {
+ if (body && command.on === "body") {
+ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participant[...]
+ } else if (mek.q && command.on === "text") {
+ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participant[...]
+ } else if (
+ (command.on === "image" || command.on === "photo") &&
+ mek.type === "imageMessage"
+ ) {
+ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participant[...]
+ } else if (
+ command.on === "sticker" &&
+ mek.type === "stickerMessage"
+ ) {
+ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participant[...]
+ }});
 
-
-
-        
-const events = require('./command')
-const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
-if (isCmd) {
-const cmd = events.commands.find((cmd) => cmd.pattern === (cmdName)) || events.commands.find((cmd) => cmd.alias && cmd.alias.includes(cmdName))
-if (cmd) {
-if (cmd.react) conn.sendMessage(from, { react: { text: cmd.react, key: mek.key }})
-
-try {
-cmd.function(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
-} catch (e) {
-console.error("[PLUGIN ERROR] " + e);
-}
-}
-}
-events.commands.map(async(command) => {
-if (body && command.on === "body") {
-command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
-} else if (mek.q && command.on === "text") {
-command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
-} else if (
-(command.on === "image" || command.on === "photo") &&
-mek.type === "imageMessage"
-) {
-command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
-} else if (
-command.on === "sticker" &&
-mek.type === "stickerMessage"
-) {
-command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
-}});
-
-})
-}
-app.get("/", (req, res) => {
-res.send("HEY, DHANI-MD STARTED ✅");
-});
-app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
-setTimeout(() => {
-connectToWA()
-}, 4000);
+ })
+ }
+ app.get("/", (req, res) => {
+ res.send("HEY, DHANI-MD STARTED ✅");
+ });
+ app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
+ setTimeout(() => {
+ connectToWA()
+ }, 4000);
