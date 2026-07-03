@@ -6,7 +6,7 @@ function convertToBool(text, fault = 'true') {
 }
 
 module.exports = {
-    SESSION_ID: process.env.SESSION_ID || "aMA3ATxL#P8tF1sQwOdQZwgys992W4RbRU5FamAdjfU7eLuxUMMY",
+    SESSION_ID: process.env.SESSION_ID || "6bZ2nbwB#wO6UCBsUYY_B-wvTSzRoqygNBibsglFh6uTAhWa8xjc",
     AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "true",
     READ_MESSAGE: process.env.READ_MESSAGE || "true", // Added auto-read configuration
     MODE: process.env.MODE || "public",
@@ -14,7 +14,7 @@ module.exports = {
     AUTO_STICKER: process.env.AUTO_STICKER || "false",
     AUTO_REPLY: process.env.AUTO_REPLY || "false",
     ALIVE_IMG: process.env.ALIVE_IMG || "https://i.imgur.com/nqCsIHZ.jpeg",
-    ALIVE_MSG: process.env.ALIVE_MSG || "HII DEAR IM ONLINE I'M SANA_MD WHATSAPP BOT 😊♻️",
+    ALIVE_MSG: process.env.ALIVE_MSG || "HII DEAR IM ONLINE I'M DHANI_MD WHATSAPP BOT 😊♻️",
     ANTI_LINK: process.env.ANTI_LINK || "true",
     ANTI_BAD: process.env.ANTI_BAD || "true",
     PREFIX: process.env.PREFIX || ".",
