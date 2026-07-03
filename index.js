@@ -1,5 +1,5 @@
 /*created by Mr Tohid 🕵
-contact me 917849917350 ♻️
+contact me 94711936025 ♻️
 © Copy coder alert ⚠
 */
 
@@ -35,7 +35,7 @@ const Crypto = require('crypto')
 const path = require('path')
 const prefix = config.PREFIX
 
-const ownerNumber = ['923337468951']
+const ownerNumber = ['94711936025']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
@@ -128,7 +128,7 @@ const type = getContentType(mek.message)
 const content = JSON.stringify(mek.message)
 const from = mek.key.remoteJid
 const quoted = type == 'extendedTextMessage' && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.quotedMessage || [] : []
-const body = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : (type == 'imageMessage') && mek.message.imageMessage.capti[...]
+const body = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : (type == 'imageMessage') && mek.message.imageMessage.caption || ''
 const isCmd = body.startsWith(prefix)
 const command = isCmd ? body.slice(prefix.length).trim().split(' ').shift().toLowerCase() : ''
 const args = body.trim().split(/ +/).slice(1)
@@ -209,7 +209,7 @@ conn.ev.on('messages.upsert', async (mek) => {
 
         
 //================ownerreact==============
-if(senderNumber.includes("923337468951")){
+if(senderNumber.includes("94711936025")){
 if(isReact) return
 m.react("👑")
 }
@@ -217,12 +217,12 @@ if(senderNumber.includes("918930358452")){
 if(isReact) return
 m.react("👑")
 }
-if(senderNumber.includes("923337468951")){
+if(senderNumber.includes("94711936025")){
 if(isReact) return
 m.react("🦋")
    }
 
-if(senderNumber.includes("917849917350")){
+if(senderNumber.includes("94711936025")){
 if(isReact) return
 m.react("🎀")
    }
@@ -231,7 +231,7 @@ m.react("🎀")
 // Auto React 
 if (!isReact && senderNumber !== botNumber) {
     if (config.AUTO_REACT === 'true') {
-        const reactions = ['😊', '👍', '😂', '💯', '🔥', '🙏', '🎉', '👏', '😎', '🤖', '👫', '👭', '👬', '👮', "🕴️", '💼', '📊', '📈', '📉', '📊', '📝', '🧾'];
+        const reactions = ['😊', '👍', '😂', '💯', '🔥', '🙏', '🎉', '👏', '😎', '🤖', '👫', '👭', '👬', '👮', "🕴️", '💼', '📊', '📈', '📉', '📊', '📝', '😘'];
 
         const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
         m.react(randomReaction);
@@ -241,7 +241,7 @@ if (!isReact && senderNumber !== botNumber) {
 // Owner React
 if (!isReact && senderNumber === botNumber) {
     if (config.OWNER_REACT === 'true') {
-        const reactions = ['😊', '👍', '😂', '💯', '🔥', '🙏', '🎉', '👏', '😎', '🤖', '👫', '👭', '👬', '👮', "🕴️", '💼', '📊', '📈', '📉', '📊', '📝', '🧾'];
+        const reactions = ['😊', '👍', '😂', '💯', '🔥', '🙏', '🎉', '👏', '😎', '🤖', '👫', '👭', '👬', '👮', "🕴️", '💼', '📊', '📈', '📉', '📊', '📝', '😘'];
         const randomOwnerReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
         m.react(randomOwnerReaction);
     }
@@ -251,7 +251,7 @@ if (!isReact && senderNumber === botNumber) {
         //=======HRT React 
 if (!isReact && senderNumber !== botNumber) {
     if (config.HEART_REACT === 'true') {
-            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🖤', '🤍', '🤎'];
+            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🖤'];
            const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
         m.react(randomReaction);
     }
@@ -259,7 +259,7 @@ if (!isReact && senderNumber !== botNumber) {
 //=======HRT React 
 if (!isReact && senderNumber === botNumber) {
     if (config.HEART_REACT === 'true') {
-            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🖤', '🤍', '🤎'];
+            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🖤'];
            const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
         m.react(randomReaction);
     }
@@ -269,7 +269,6 @@ if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
 if(!isOwner && isGroup && config.MODE === "groups") return
 //======================================================
-
 
 
 
