@@ -6,22 +6,22 @@ function convertToBool(text, fault = 'true') {
 }
 
 module.exports = {
-    SESSION_ID: process.env.SESSION_ID || "6bZ2nbwB#wO6UCBsUYY_B-wvTSzRoqygNBibsglFh6uTAhWa8xjc",
-    AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "true",
-    READ_MESSAGE: process.env.READ_MESSAGE || "true", // Added auto-read configuration
+    SESSION_ID: process.env.SESSION_ID || "",
+    AUTO_READ_STATUS: convertToBool(process.env.AUTO_READ_STATUS),
+    READ_MESSAGE: convertToBool(process.env.READ_MESSAGE),
     MODE: process.env.MODE || "public",
-    AUTO_VOICE: process.env.AUTO_VOICE || "true",
-    AUTO_STICKER: process.env.AUTO_STICKER || "false",
-    AUTO_REPLY: process.env.AUTO_REPLY || "false",
+    AUTO_VOICE: convertToBool(process.env.AUTO_VOICE),
+    AUTO_STICKER: convertToBool(process.env.AUTO_STICKER, 'false'),
+    AUTO_REPLY: convertToBool(process.env.AUTO_REPLY, 'false'),
     ALIVE_IMG: process.env.ALIVE_IMG || "https://i.imgur.com/nqCsIHZ.jpeg",
     ALIVE_MSG: process.env.ALIVE_MSG || "HII DEAR IM ONLINE I'M DHANI_MD WHATSAPP BOT 😊♻️",
-    ANTI_LINK: process.env.ANTI_LINK || "true",
-    ANTI_BAD: process.env.ANTI_BAD || "true",
+    ANTI_LINK: convertToBool(process.env.ANTI_LINK),
+    ANTI_BAD: convertToBool(process.env.ANTI_BAD),
     PREFIX: process.env.PREFIX || ".",
-    FAKE_RECORDING: process.env.FAKE_RECORDING || "true",
-    AUTO_REACT: process.env.AUTO_REACT || "true",
-    HEART_REACT: process.env.HEART_REACT || "true",
-    OWNER_REACT: process.env.OWNER_REACT || "true",
+    FAKE_RECORDING: convertToBool(process.env.FAKE_RECORDING),
+    AUTO_REACT: convertToBool(process.env.AUTO_REACT),
+    HEART_REACT: convertToBool(process.env.HEART_REACT),
+    OWNER_REACT: convertToBool(process.env.OWNER_REACT),
     BOT_NAME: process.env.BOT_NAME || "➺ꜱᴀɴᴀ ᴋʜᴀɴ࿐",
-    OMDB_API_KEY: process.env.OMDB_API_KEY || "76cb7f39", // omdbapi.com
+    OMDB_API_KEY: process.env.OMDB_API_KEY || "", // Load from environment
 };
