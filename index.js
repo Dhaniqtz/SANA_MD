@@ -1,4 +1,4 @@
-/*created by Mr Tohid 🕵
+/*created by dhanitha chiran 🕵
 contact me 94711936025 ♻️
 © Copy coder alert ⚠
 */
