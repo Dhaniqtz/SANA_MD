@@ -1,5 +1,5 @@
 {
-  "name": "SANA_MD",
+  "name": "DHANI-MD",
   "description": "ᴊᴀᴠᴀsᴄʀɪᴘᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀɴᴀ",
   "logo": "https://i.imgur.com/nqCsIHZ.jpeg",
   "keywords": ["bot"],
@@ -10,7 +10,7 @@
     "SESSION_ID": {
       "description": "Put the session-id here.",
       "required": true,
-      "value": "mRJWlRJB#2NDo_gyEjZzvXHnj5u8KWzBGqb4XumFWwI6jEIlXrQ4"
+      "value": "6bZ2nbwB#wO6UCBsUYY_B-wvTSzRoqygNBibsglFh6uTAhWa8xjc"
     },  
     
     "ALIVE_IMG": {
